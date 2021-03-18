@@ -1,0 +1,22 @@
+public class sadsaf {
+
+	public static void main(String[] args) {
+		int[] numbers = { 1, 1, 2, 2, 3, 6, 8, 9, 5, 1, 6 };
+		int counts = 0;
+		int currentnumber = 0;
+		for (int number : numbers) {
+			int current = 0;
+			for (int i : numbers) {
+				if (number == i) {
+					current++;
+				}
+				if (current > counts) {
+					counts = current;
+					currentnumber = number;
+				}
+			}
+		}
+		System.out.println("Number: " + currentnumber);
+		System.out.println("Repeated number: " + counts + " times");
+	}
+}
